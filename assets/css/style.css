@@ -1,0 +1,20 @@
+body {
+    background-color: navy;
+}
+
+header {
+    color: aqua;
+    text-align: center;
+}
+
+.buttons {
+    color: red;
+    
+}
+#game-area {
+    align: center
+}
+
+#score{ 
+    color: red;
+}
