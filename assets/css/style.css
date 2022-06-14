@@ -7,59 +7,71 @@
 body {
     background-color: #202120;
     color: darkorange;
+    font-family: 'Satisfy', cursive, sans-serif;
+    font-weight: 200;
 }
 
 header {
     text-align: center;
     margin-top: 20px;
-    font-size: 150%;
+    font-size: 200%;
+    font-family: 'Satisfy', cursive, sans-serif;
+}
 
+/* Game and Button section: */
+
+#game-area {
+    align: center;
+    text-align: center;
 }
 
 .buttons {
     color: red;
     margin: 5%;
-    
-}
-#game-area {
-    align: center;
-    
-}
-
-#score{ 
-    
-}
-
-#game-area{
-    text-align: center;
 }
 
 .btn1 {
     width: 110px;
     height: 110px;
-    
 }
 
 #scissors {
     right: 20%;
 }
 
+/* Lets play: */
+
+#lets-play{
+    text-align: center;
+    margin: 30px;
+    font-size: 40px;
+}
+
+/* Picked Section: */
+
 .picked{
     text-align: center;
 }
 
-#score {
+/* Score Section: */
+
+#score{ 
+    border: solid 3px;
+    width: 150px;
     text-align: center;
-    margin: 5%;
+    margin: 30px auto;
+    background-color: darkslategrey;
 }
 
 .scores{
-    margin: 5%;
+    margin: 10px;
 }
 
-#comp-board{
-    text-align: right;
-}
+/* #comp-board{
+    text-align: center;
+} */
+
+/* Turns left section: */
 
 #turns{
     text-align: center;
