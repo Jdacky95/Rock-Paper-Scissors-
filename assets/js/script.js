@@ -6,7 +6,7 @@ const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 let yourScoreNum = 0;
 let compScoreNum = 0;
-
+let turnsLeft = 5;
 
 // Declaring elements picked: 
 
@@ -29,31 +29,51 @@ const turns = document.getElementById("turns-left");
 
 // function play()
 
+// function picked(){
+//     youPicked.innerHTML = yourPick()
+//     compPicked.innerHTML = computerPick()
+// }
+
+function showPicked(computerPicke) {
+    // const computerPicke = computerPick();
+    if (computerPicke === "rock")
+        return
+    youPicked.innerHTML = "Rock";
+}
+
 function computerPick() {
     const picks = ["rock", "paper", "scissors"];
     const randomChoice = Math.floor(Math.random() * 3);
     return picks[randomChoice];
 }
 
-function win(yourPick, computerPicked){
+
+function win(yourPick, computerPicked) {
     yourScoreNum++;
     yourScore.innerHTML = yourScoreNum;
     result.innerHTML = "YOU WIN!";
+    turnsLeft--;
+    turns.innerHTML = turnsLeft;
 
 }
 
-function lose(yourPick, computerPicked){
+function lose(yourPick, computerPicked) {
     compScoreNum++;
     computerScore.innerHTML = compScoreNum;
     result.innerHTML = "you lose !";
+    turnsLeft--;
+    turns.innerHTML = turnsLeft;
 
 }
 
-function tie(yourPick, computerPicked){
-    
+function tie(yourPick, computerPicked) {
+
     result.innerHTML = "It's a Tie!";
+    turnsLeft--;
+    turns.innerHTML = turnsLeft;
 
 }
+
 
 
 
