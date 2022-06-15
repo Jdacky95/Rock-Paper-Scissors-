@@ -21,12 +21,12 @@ header {
 /* Game and Button section: */
 
 #game-area {
-    align: center;
+    
     text-align: center;
 }
 
-.buttons {
-    color: red;
+.game {
+    display: inline-block;
     margin: 5%;
 }
 
