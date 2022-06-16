@@ -8,12 +8,14 @@ let yourScoreNum = 0;
 let compScoreNum = 0;
 let turnsLeft = 5;
 
+
+
 // Declaring elements picked: 
 
 const picked = document.querySelector(".picked");
 const youPicked = document.getElementById("you-picked");
 const compPicked = document.getElementById("comp-picked");
-const result = document.getElementById("result");
+let result = document.getElementById("result");
 
 // Declaring scores to be updated: 
 
@@ -29,24 +31,20 @@ const turns = document.getElementById("turns-left");
 
 // function play()
 
-// function picked(){
-//     youPicked.innerHTML = yourPick()
-//     compPicked.innerHTML = computerPick()
-// }
 
-function showPicked(computerPicke) {
-    // const computerPicke = computerPick();
-    if (computerPicke === "rock")
-        return
-    youPicked.innerHTML = "Rock";
-}
 
 function computerPick() {
+
     const picks = ["rock", "paper", "scissors"];
     const randomChoice = Math.floor(Math.random() * 3);
     return picks[randomChoice];
 }
 
+function showPick(pick) {
+    if (pick === "rock") return "Rock";
+    if (pick === "paper") return "Paper";
+    return "Scissors";
+}
 
 function win(yourPick, computerPicked) {
     yourScoreNum++;
@@ -55,9 +53,11 @@ function win(yourPick, computerPicked) {
     turnsLeft--;
     turns.innerHTML = turnsLeft;
 
+
+
 }
 
-function lose(yourPick, computerPicked) {
+function lose(_yourPick, _computerPicked) {
     compScoreNum++;
     computerScore.innerHTML = compScoreNum;
     result.innerHTML = "you lose !";
@@ -98,7 +98,12 @@ function play(yourPick) {
         case "scissorsscissors":
             tie()
             break;
+
+
     }
+
+    compPicked.innerHTML = showPick(computerPicked);
+    youPicked.innerHTML = showPick(yourPick);
 
 }
 
