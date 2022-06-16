@@ -7,7 +7,7 @@
 body {
     background-color: #202120;
     color: darkorange;
-    font-family: 'Satisfy', cursive, sans-serif;
+    font-family: 'Orbitron', sans-serif;
     font-weight: 200;
 }
 
@@ -15,7 +15,6 @@ header {
     text-align: center;
     margin-top: 20px;
     font-size: 200%;
-    font-family: 'Satisfy', cursive, sans-serif;
 }
 
 /* Game and Button section: */
@@ -44,23 +43,30 @@ header {
 #lets-play{
     text-align: center;
     margin: 30px;
-    font-size: 40px;
+    font-size: 210%;
+    
 }
 
 /* Picked Section: */
 
+#picked-div{
+    font-size: 150%;
+}
+
 .picked{
     text-align: center;
+    
 }
 
 /* Score Section: */
 
 #score{ 
     border: solid 3px;
-    width: 150px;
+    width: 250px;
     text-align: center;
     margin: 30px auto;
     background-color: darkslategrey;
+    font-size: 150%;
 }
 
 .scores{
@@ -75,4 +81,5 @@ header {
 
 #turns{
     text-align: center;
+    font-size: 150%;
 }

@@ -8,7 +8,10 @@ let yourScoreNum = 0;
 let compScoreNum = 0;
 let turnsLeft = 5;
 
+// Declare lets play and "Restart":
 
+let letsPlay = document.getElementById("lets-play")
+let restart = document.getElementById("restart")
 
 // Declaring elements picked: 
 
@@ -29,9 +32,9 @@ const turns = document.getElementById("turns-left");
 
 // Start of play functions
 
-// function play()
 
 
+// Computer Choice:
 
 function computerPick() {
 
@@ -46,35 +49,44 @@ function showPick(pick) {
     return "Scissors";
 }
 
-function win(yourPick, computerPicked) {
+function win() {
     yourScoreNum++;
     yourScore.innerHTML = yourScoreNum;
     result.innerHTML = "YOU WIN!";
     turnsLeft--;
     turns.innerHTML = turnsLeft;
-
-
-
+    if (yourScoreNum === 3) {
+    letsPlay.innerHTML = "You are the Champion!, would you like to play again?";
 }
 
-function lose(_yourPick, _computerPicked) {
+    }
+
+
+
+
+
+function lose() {
     compScoreNum++;
     computerScore.innerHTML = compScoreNum;
     result.innerHTML = "you lose !";
     turnsLeft--;
     turns.innerHTML = turnsLeft;
+    if (compScoreNum === 3) {
+        letsPlay.innerHTML = "The Computer wins this time!, would you like to play again?";
+    }
+    
 
 }
 
-function tie(yourPick, computerPicked) {
+function tie() {
 
-    result.innerHTML = "It's a Tie!";
+    result.innerHTML = "It's a tie!";
     turnsLeft--;
     turns.innerHTML = turnsLeft;
 
 }
 
-
+// function play()
 
 
 function play(yourPick) {
@@ -111,7 +123,9 @@ function play(yourPick) {
 // console.log("hi")
 
 
-// Computer Choice:
+
+
+// Event click  listeners for the rock paper and scissor icons. (yourPick)
 
 
 
@@ -126,3 +140,10 @@ paper.addEventListener('click', function () {
 scissors.addEventListener('click', function () {
     play("scissors")
 })
+
+function winnerAndRestart(compScoreNum, yourScoreNum){
+
+    if (compScoreNum > yourScoreNum) console.log("Computer is the winner!") ;
+    if (compScoreNum < yourScoreNum) console.log("You are the winner") ;
+}
+
