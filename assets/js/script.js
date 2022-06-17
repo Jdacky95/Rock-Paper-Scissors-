@@ -30,6 +30,9 @@ const computerScore = document.getElementById("computer-score");
 
 const turns = document.getElementById("turns-left");
 
+
+
+let gameOver = false
 // Start of play functions
 
 
@@ -55,10 +58,14 @@ function win() {
     result.innerHTML = "YOU WIN!";
     turnsLeft--;
     turns.innerHTML = turnsLeft;
-    if (yourScoreNum === 3) {
-    letsPlay.innerHTML = "You are the Champion!, would you like to play again?";
+    if (yourScoreNum === 5) {
+    letsPlay.innerHTML = "You are the Champion!";
+    restart.innerHTML = "Would you like to play again?";
+    
 }
-
+// if (yourScoreNum || compScoreNum === 3){
+//     restart.innerHTML = "Would you like to play again? "
+// }
     }
 
 
@@ -71,8 +78,9 @@ function lose() {
     result.innerHTML = "you lose !";
     turnsLeft--;
     turns.innerHTML = turnsLeft;
-    if (compScoreNum === 3) {
-        letsPlay.innerHTML = "The Computer wins this time!, would you like to play again?";
+    if (compScoreNum === 5) {
+        letsPlay.innerHTML = "The Computer wins this time!";
+        restart.innerHTML = "Would you like to play again?";
     }
     
 
@@ -141,9 +149,5 @@ scissors.addEventListener('click', function () {
     play("scissors")
 })
 
-function winnerAndRestart(compScoreNum, yourScoreNum){
 
-    if (compScoreNum > yourScoreNum) console.log("Computer is the winner!") ;
-    if (compScoreNum < yourScoreNum) console.log("You are the winner") ;
-}
 

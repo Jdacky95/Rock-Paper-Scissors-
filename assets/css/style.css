@@ -47,6 +47,16 @@ header {
     
 }
 
+ #restart:hover{
+    color: blue;
+}
+
+#restart{
+
+    text-align: center;
+    margin: 30px;
+    font-size: 210%;
+}
 /* Picked Section: */
 
 #picked-div{
@@ -82,4 +92,56 @@ header {
 #turns{
     text-align: center;
     font-size: 150%;
+}
+
+@media screen and (max-width: 800px) {
+
+header{ font-size: 110%;}
+
+#lets-play{
+    font-size: 160%;
+}
+
+#score{
+    font-size: 120%;
+}
+
+.btn1{
+    height: 75px;
+    width: 75px;
+}
+
+#picked-div{
+    font-size: 120%;
+}
+
+#restart{
+    font-size:  160%;
+}
+}
+
+@media screen and (max-width: 450px) {
+
+    header{ font-size: 75%;}
+
+    #lets-play{
+        font-size: 110%;
+    }
+    
+    #score{
+        font-size: 80%;
+    }
+    
+    .btn1{
+        height: 60px;
+        width: 60px;
+    }
+    
+    #picked-div{
+        font-size: 80%;
+    }
+    
+    #restart{
+        font-size:  110%;
+    }
 }
