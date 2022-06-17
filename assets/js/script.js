@@ -12,6 +12,7 @@ let turnsLeft = 5;
 
 let letsPlay = document.getElementById("lets-play")
 let restart = document.getElementById("restart")
+// let rules = document.getElementById("rules")
 
 // Declaring elements picked: 
 
@@ -32,12 +33,28 @@ const turns = document.getElementById("turns-left");
 
 
 
-let gameOver = false
+//
 // Start of play functions
 
 
 
 // Computer Choice:
+
+function gameOver() {
+    yourScoreNum  = 0;
+    compScoreNum = 0;
+    yourScore.innerHTML = yourScoreNum;
+    computerScore.innerHTML = compScoreNum;
+    console.log("test");
+    if (yourScoreNum || compScoreNum < 5){
+        letsPlay.innerHTML = "Lets Play!"
+        restart.innerHTML = ""
+        youPicked.innerHTML=""
+        compPicked.innerHTML=""
+        result.innerHTML=""
+        
+    }
+}
 
 function computerPick() {
 
@@ -56,11 +73,12 @@ function win() {
     yourScoreNum++;
     yourScore.innerHTML = yourScoreNum;
     result.innerHTML = "YOU WIN!";
-    turnsLeft--;
-    turns.innerHTML = turnsLeft;
+    // turnsLeft--;
+    // turns.innerHTML = turnsLeft;
     if (yourScoreNum === 5) {
     letsPlay.innerHTML = "You are the Champion!";
     restart.innerHTML = "Would you like to play again?";
+    
     
 }
 // if (yourScoreNum || compScoreNum === 3){
@@ -76,8 +94,8 @@ function lose() {
     compScoreNum++;
     computerScore.innerHTML = compScoreNum;
     result.innerHTML = "you lose !";
-    turnsLeft--;
-    turns.innerHTML = turnsLeft;
+    // turnsLeft--;
+    // turns.innerHTML = turnsLeft;
     if (compScoreNum === 5) {
         letsPlay.innerHTML = "The Computer wins this time!";
         restart.innerHTML = "Would you like to play again?";
@@ -127,6 +145,9 @@ function play(yourPick) {
 
 }
 
+// function gameOver(){
+//     if 
+// }
 
 // console.log("hi")
 
@@ -139,15 +160,31 @@ function play(yourPick) {
 
 rock.addEventListener('click', function () {
     play("rock")
+    if (yourScoreNum || compScoreNum > 5){
+        gameOver()
+    }
 })
 
 paper.addEventListener('click', function () {
     play("paper")
+    if (yourScoreNum || compScoreNum > 5){
+        gameOver()
+    }
 })
 
 scissors.addEventListener('click', function () {
     play("scissors")
+    if (yourScoreNum || compScoreNum > 5){
+        gameOver()
+    }
 })
 
+// Event click listener for "play again"
 
+ 
+
+restart.addEventListener('click', function() {
+    gameOver()
+})
+// }
 
