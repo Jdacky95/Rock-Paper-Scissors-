@@ -8,6 +8,8 @@ let yourScoreNum = 0;
 let compScoreNum = 0;
 let turnsLeft = 5;
 
+
+
 // Declare lets play and "Restart":
 
 let letsPlay = document.getElementById("lets-play")
@@ -17,8 +19,8 @@ let restart = document.getElementById("restart")
 // Declaring elements picked: 
 
 const picked = document.querySelector(".picked");
-const youPicked = document.getElementById("you-picked");
-const compPicked = document.getElementById("comp-picked");
+let youPicked = document.getElementById("you-picked");
+let compPicked = document.getElementById("comp-picked");
 let result = document.getElementById("result");
 
 // Declaring scores to be updated: 
@@ -30,6 +32,7 @@ const computerScore = document.getElementById("computer-score");
 // Declaring Turns left: 
 
 const turns = document.getElementById("turns-left");
+
 
 
 
@@ -56,60 +59,55 @@ function gameOver() {
     }
 }
 
+// function showPicks(){
+//     compPicked.innerHTML = computerPick()
+// }
+
+// function showPick() {
+//     if (computerPick() === "rock") return compPicked.innerHTML = "Rock";
+//     if (pick == "paper") return "Paper";
+//     if (pick ==  "Scissors"); return "scissors";
+    
+// }
+
 function computerPick() {
-
+   
     const picks = ["rock", "paper", "scissors"];
-    const randomChoice = Math.floor(Math.random() * 3);
-    return picks[randomChoice];
+    const randomNumber = Math.floor(Math.random() * 3);
+    return picks[randomNumber]; 
+        
+    
+    
+        
 }
 
-function showPick(pick) {
-    if (pick === "rock") return "Rock";
-    if (pick === "paper") return "Paper";
-    return "Scissors";
-}
+
 
 function win() {
     yourScoreNum++;
     yourScore.innerHTML = yourScoreNum;
     result.innerHTML = "YOU WIN!";
-    // turnsLeft--;
-    // turns.innerHTML = turnsLeft;
     if (yourScoreNum === 5) {
     letsPlay.innerHTML = "You are the Champion!";
     restart.innerHTML = "Would you like to play again?";
-    
-    
 }
-// if (yourScoreNum || compScoreNum === 3){
-//     restart.innerHTML = "Would you like to play again? "
-// }
     }
-
-
-
-
 
 function lose() {
     compScoreNum++;
     computerScore.innerHTML = compScoreNum;
     result.innerHTML = "you lose !";
-    // turnsLeft--;
-    // turns.innerHTML = turnsLeft;
     if (compScoreNum === 5) {
         letsPlay.innerHTML = "The Computer wins this time!";
         restart.innerHTML = "Would you like to play again?";
     }
     
-
 }
 
 function tie() {
 
     result.innerHTML = "It's a tie!";
-    turnsLeft--;
-    turns.innerHTML = turnsLeft;
-
+    
 }
 
 // function play()
@@ -118,16 +116,19 @@ function tie() {
 function play(yourPick) {
 
     const computerPicked = computerPick();
+    
     switch (yourPick + computerPicked) {
         case "rockscissors":
         case "paperrock":
         case "scissorspaper":
             win()
+            
             break;
 
         case "rockpaper":
         case "paperscissors":
         case "scissorsrock":
+        
             lose()
             break;
 
@@ -136,20 +137,14 @@ function play(yourPick) {
         case "scissorsscissors":
             tie()
             break;
-
-
     }
 
-    compPicked.innerHTML = showPick(computerPicked);
-    youPicked.innerHTML = showPick(yourPick);
-
+    console.log(computerPicked)
+    compPicked.innerHTML = computerPicked
 }
 
-// function gameOver(){
-//     if 
-// }
 
-// console.log("hi")
+
 
 
 
@@ -159,29 +154,27 @@ function play(yourPick) {
 
 
 rock.addEventListener('click', function () {
+    
     play("rock")
-    if (yourScoreNum || compScoreNum > 5){
-        gameOver()
-    }
+    youPicked.innerHTML = "Rock"
 })
 
 paper.addEventListener('click', function () {
+    
     play("paper")
-    if (yourScoreNum || compScoreNum > 5){
-        gameOver()
-    }
+    youPicked.innerHTML = "Paper"
+    
 })
 
 scissors.addEventListener('click', function () {
+    
     play("scissors")
-    if (yourScoreNum || compScoreNum > 5){
-        gameOver()
-    }
+    youPicked.innerHTML = "Scissors"
+    
 })
 
 // Event click listener for "play again"
 
- 
 
 restart.addEventListener('click', function() {
     gameOver()
