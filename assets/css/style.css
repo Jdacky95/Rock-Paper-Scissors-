@@ -34,6 +34,10 @@ header {
     height: 110px;
 }
 
+.btn1:hover{
+    zoom: 120%;
+}
+
 #scissors {
     right: 20%;
 }

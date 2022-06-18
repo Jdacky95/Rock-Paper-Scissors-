@@ -29,29 +29,29 @@ const computerScore = document.getElementById("computer-score");
 // Function for the game over restart div:
 
 function gameOver() {
-    yourScoreNum  = 0;
+    yourScoreNum = 0;
     compScoreNum = 0;
     yourScore.innerHTML = yourScoreNum;
     computerScore.innerHTML = compScoreNum;
-    console.log("test");
-    if (yourScoreNum || compScoreNum < 5){
+    
+    if (yourScoreNum || compScoreNum < 5) {
         letsPlay.innerHTML = "Lets Play!"
         restart.innerHTML = ""
-        youPicked.innerHTML=""
-        compPicked.innerHTML=""
-        result.innerHTML=""
-        
+        youPicked.innerHTML = ""
+        compPicked.innerHTML = ""
+        result.innerHTML = ""
+
     }
 }
 
 // Computer Choice: Code for the computer to pick a random choice from the Array for the play function:
 
 function computerPick() {
-   
+
     const picks = ["rock", "paper", "scissors"];
     const randomNumber = Math.floor(Math.random() * 3);
-    return picks[randomNumber]; 
-        
+    return picks[randomNumber];
+
 }
 
 // Win function that increments score and shows the 'win' results in the dom:
@@ -61,12 +61,12 @@ function win() {
     yourScore.innerHTML = yourScoreNum;
     result.innerHTML = "YOU WIN!";
     if (yourScoreNum === 5) {
-    letsPlay.innerHTML = "You are the Champion!";
-    restart.innerHTML = "Would you like to play again?";
-}
+        letsPlay.innerHTML = "You are the Champion!";
+        restart.innerHTML = "Would you like to play again?";
     }
+}
 
-    // Lose function that decrements score and shows the 'lose' result:
+// Lose function that decrements score and shows the 'lose' result:
 
 function lose() {
     compScoreNum++;
@@ -76,7 +76,7 @@ function lose() {
         letsPlay.innerHTML = "The Computer wins this time!";
         restart.innerHTML = "Would you like to play again?";
     }
-    
+
 }
 
 // tie function that shows 'tie' result:
@@ -84,7 +84,7 @@ function lose() {
 function tie() {
 
     result.innerHTML = "It's a tie!";
-    
+
 }
 
 /*  Play function: Contains a switch function that switches between all possible user and computer choices and assigns 'win', 'lose' or 'tie' 
@@ -95,19 +95,19 @@ functions appropriately, produces 'computer picked' variable in the DOM */
 function play(yourPick) {
 
     const computerPicked = computerPick();
-    
+
     switch (yourPick + computerPicked) {
         case "rockscissors":
         case "paperrock":
         case "scissorspaper":
             win()
-            
+
             break;
 
         case "rockpaper":
         case "paperscissors":
         case "scissorsrock":
-        
+
             lose()
             break;
 
@@ -118,26 +118,29 @@ function play(yourPick) {
             break;
     }
     compPicked.innerHTML = computerPicked
+    
+        letsPlay.innerHTML = ""
+    
 }
 
 // Event click  listeners for the rock paper and scissor icons. (yourPick)- shows Picks in the DOM.
 
 
 rock.addEventListener('click', function () {
-    
+
     play("rock")
     youPicked.innerHTML = "Rock"
 })
 
 paper.addEventListener('click', function () {
-    
+
     play("paper")
     youPicked.innerHTML = "Paper"
-    
+
 })
 
 scissors.addEventListener('click', function () {
-    
+
     play("scissors")
     youPicked.innerHTML = "Scissors"
 
@@ -145,8 +148,6 @@ scissors.addEventListener('click', function () {
 
 // Event click listener for "play again"
 
-restart.addEventListener('click', function() {
+restart.addEventListener('click', function () {
     gameOver()
 })
-
-
