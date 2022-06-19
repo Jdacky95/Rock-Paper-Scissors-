@@ -1,12 +1,9 @@
 // Declaring Game and Rock, Paper, Scissors div areas 
-const game = document.querySelector(".game");
-const buttons = document.querySelector(".btn1");
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 let yourScoreNum = 0;
 let compScoreNum = 0;
-let turnsLeft = 5;
 
 // Declare lets play and "Restart":
 
@@ -16,16 +13,12 @@ let restart = document.getElementById("restart");
 
 // Declaring elements picked: 
 
-const picked_div = document.getElementById("picked-div");
-const picked = document.querySelector(".picked");
 let youPicked = document.getElementById("you-picked");
 let compPicked = document.getElementById("comp-picked");
 let result = document.getElementById("result");
 
 // Declaring scores to be updated: 
 
-const score = document.getElementById("score");
-const scores = document.querySelector(".scores");
 const yourScore = document.getElementById("your-score");
 const computerScore = document.getElementById("computer-score");
 

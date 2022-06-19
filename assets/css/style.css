@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #202120;
+    background-color: black;
     color: darkorange;
     font-family: 'Orbitron', sans-serif;
     font-weight: 200;
@@ -91,7 +91,7 @@ header {
     width: 250px;
     text-align: center;
     margin: 30px auto;
-    background-color: black;
+    background-color: #202120;
     font-size: 150%;
 }
 
