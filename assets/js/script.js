@@ -10,11 +10,13 @@ let turnsLeft = 5;
 
 // Declare lets play and "Restart":
 
+let rules = document.getElementById("rules")
 let letsPlay = document.getElementById("lets-play")
 let restart = document.getElementById("restart")
 
 // Declaring elements picked: 
 
+const picked_div = document.getElementById("picked-div");
 const picked = document.querySelector(".picked");
 let youPicked = document.getElementById("you-picked");
 let compPicked = document.getElementById("comp-picked");
@@ -22,6 +24,7 @@ let result = document.getElementById("result");
 
 // Declaring scores to be updated: 
 
+const score = document.getElementById("score");
 const scores = document.querySelector(".scores");
 const yourScore = document.getElementById("your-score");
 const computerScore = document.getElementById("computer-score");
@@ -33,13 +36,15 @@ function gameOver() {
     compScoreNum = 0;
     yourScore.innerHTML = yourScoreNum;
     computerScore.innerHTML = compScoreNum;
-    
+
     if (yourScoreNum || compScoreNum < 5) {
-        letsPlay.innerHTML = "Lets Play!"
+        letsPlay.innerHTML = "Let's play!"
+        rules.innerHTML = "First to five wins!"
         restart.innerHTML = ""
         youPicked.innerHTML = ""
         compPicked.innerHTML = ""
         result.innerHTML = ""
+
 
     }
 }
@@ -60,10 +65,7 @@ function win() {
     yourScoreNum++;
     yourScore.innerHTML = yourScoreNum;
     result.innerHTML = "YOU WIN!";
-    if (yourScoreNum === 5) {
-        letsPlay.innerHTML = "You are the Champion!";
-        restart.innerHTML = "Would you like to play again?";
-    }
+
 }
 
 // Lose function that decrements score and shows the 'lose' result:
@@ -72,10 +74,7 @@ function lose() {
     compScoreNum++;
     computerScore.innerHTML = compScoreNum;
     result.innerHTML = "Computer Wins.";
-    if (compScoreNum === 5) {
-        letsPlay.innerHTML = "The Computer wins this time!";
-        restart.innerHTML = "Would you like to play again?";
-    }
+
 
 }
 
@@ -118,9 +117,24 @@ function play(yourPick) {
             break;
     }
     compPicked.innerHTML = computerPicked
-    
-        letsPlay.innerHTML = ""
-    
+
+    rules.innerHTML = ""
+    letsPlay.innerHTML = ""
+    restart.innerHTML = ""
+
+    if (yourScoreNum >= 5) {
+        letsPlay.innerHTML = "You are the Champion!";
+        restart.innerHTML = "Would you like to play again?";
+
+    }
+    if (compScoreNum >= 5) {
+        restart.innerHTML = "Would you like to play again?";
+        letsPlay.innerHTML = "The Computer wins this time!";
+
+    }
+
+
+
 }
 
 // Event click  listeners for the rock paper and scissor icons. (yourPick)- shows Picks in the DOM.

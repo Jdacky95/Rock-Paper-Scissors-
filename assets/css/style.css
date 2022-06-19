@@ -34,7 +34,7 @@ header {
     height: 110px;
 }
 
-.btn1:hover{
+.btn1:hover {
     zoom: 120%;
 }
 
@@ -44,7 +44,7 @@ header {
 
 /* Lets play: */
 
-#rules{
+#rules {
     text-align: center;
     margin: 30px;
     font-size: 210%;
@@ -53,7 +53,8 @@ header {
 #lets-play {
     text-align: center;
     margin: 30px;
-    font-size: 210%;
+    font-size: 180%;
+
 }
 
 #restart:hover {
@@ -63,7 +64,7 @@ header {
 #restart {
     text-align: center;
     margin: 30px;
-    font-size: 210%;
+    font-size: 180%;
     text-decoration: underline;
 }
 
@@ -75,6 +76,11 @@ header {
 
 .picked {
     text-align: center;
+}
+
+#r-picked {
+
+    font-size: 130%;
 }
 
 /* Score Section: */
@@ -104,7 +110,7 @@ header {
         font-size: 160%;
     }
 
-    #rules{
+    #rules {
         font-size: 160%;
     }
 
@@ -126,18 +132,18 @@ header {
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 470px) {
 
     header {
         font-size: 75%;
     }
 
     #lets-play {
-        font-size: 110%;
+        font-size: 90%;
     }
 
-    #rules{
-        font-size: 110%;
+    #rules {
+        font-size: 90%;
     }
 
     #score {
@@ -154,6 +160,6 @@ header {
     }
 
     #restart {
-        font-size: 110%;
+        font-size: 80%;
     }
 }
