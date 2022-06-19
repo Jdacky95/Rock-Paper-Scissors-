@@ -10,9 +10,9 @@ let turnsLeft = 5;
 
 // Declare lets play and "Restart":
 
-let rules = document.getElementById("rules")
-let letsPlay = document.getElementById("lets-play")
-let restart = document.getElementById("restart")
+let rules = document.getElementById("rules");
+let letsPlay = document.getElementById("lets-play");
+let restart = document.getElementById("restart");
 
 // Declaring elements picked: 
 
@@ -38,12 +38,12 @@ function gameOver() {
     computerScore.innerHTML = compScoreNum;
 
     if (yourScoreNum || compScoreNum < 5) {
-        letsPlay.innerHTML = "Let's play!"
-        rules.innerHTML = "First to five wins!"
-        restart.innerHTML = ""
-        youPicked.innerHTML = ""
-        compPicked.innerHTML = ""
-        result.innerHTML = ""
+        letsPlay.innerHTML = "Let's play!";
+        rules.innerHTML = "First to five wins!";
+        restart.innerHTML = "";
+        youPicked.innerHTML = "";
+        compPicked.innerHTML = "";
+        result.innerHTML = "";
 
 
     }
@@ -99,7 +99,7 @@ function play(yourPick) {
         case "rockscissors":
         case "paperrock":
         case "scissorspaper":
-            win()
+            win();
 
             break;
 
@@ -107,20 +107,20 @@ function play(yourPick) {
         case "paperscissors":
         case "scissorsrock":
 
-            lose()
+            lose();
             break;
 
         case "rockrock":
         case "paperpaper":
         case "scissorsscissors":
-            tie()
+            tie();
             break;
     }
-    compPicked.innerHTML = computerPicked
+    compPicked.innerHTML = computerPicked;
 
-    rules.innerHTML = ""
-    letsPlay.innerHTML = ""
-    restart.innerHTML = ""
+    rules.innerHTML = "";
+    letsPlay.innerHTML = "";
+    restart.innerHTML = "";
 
     if (yourScoreNum >= 5) {
         letsPlay.innerHTML = "You are the Champion!";
@@ -142,26 +142,26 @@ function play(yourPick) {
 
 rock.addEventListener('click', function () {
 
-    play("rock")
-    youPicked.innerHTML = "Rock"
-})
+    play("rock");
+    youPicked.innerHTML = "Rock";
+});
 
 paper.addEventListener('click', function () {
 
-    play("paper")
-    youPicked.innerHTML = "Paper"
+    play("paper");
+    youPicked.innerHTML = "Paper";
 
-})
+});
 
 scissors.addEventListener('click', function () {
 
-    play("scissors")
-    youPicked.innerHTML = "Scissors"
+    play("scissors");
+    youPicked.innerHTML = "Scissors";
 
-})
+});
 
 // Event click listener for "play again"
 
 restart.addEventListener('click', function () {
-    gameOver()
-})
+    gameOver();
+});

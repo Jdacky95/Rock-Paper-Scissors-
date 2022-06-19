@@ -22,6 +22,7 @@ header {
 #game-area {
 
     text-align: center;
+    height: 200px
 }
 
 .game {
@@ -90,7 +91,7 @@ header {
     width: 250px;
     text-align: center;
     margin: 30px auto;
-    background-color: darkslategrey;
+    background-color: black;
     font-size: 150%;
 }
 
@@ -130,7 +131,15 @@ header {
     #restart {
         font-size: 160%;
     }
+
+    #game-area {
+
+        text-align: center;
+        height: 150px
+    }
 }
+
+
 
 @media screen and (max-width: 470px) {
 
@@ -161,5 +170,10 @@ header {
 
     #restart {
         font-size: 80%;
+    }
+
+    #game-area {
+        text-align: center;
+        height: 100px
     }
 }
