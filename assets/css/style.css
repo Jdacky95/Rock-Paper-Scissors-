@@ -25,6 +25,12 @@ header {
     height: 200px
 }
 
+#choose {
+    font-size: 180%;
+    text-align: center;
+    margin-top: 30px;
+}
+
 .game {
     display: inline-block;
     margin: 5%;
@@ -99,10 +105,10 @@ header {
     margin: 10px;
 }
 
-#footer{
+#footer {
     text-align: center;
     width: 80%;
-    
+
     margin: 30px auto;
 }
 
