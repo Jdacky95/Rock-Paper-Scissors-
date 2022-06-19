@@ -99,6 +99,13 @@ header {
     margin: 10px;
 }
 
+#footer{
+    text-align: center;
+    width: 80%;
+    
+    margin: 30px auto;
+}
+
 /* Styling's for all media queries: */
 
 @media screen and (max-width: 800px) {
