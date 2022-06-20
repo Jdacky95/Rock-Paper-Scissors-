@@ -8,7 +8,9 @@ My webpage is a classic game of "Rock, Paper, Scissors" that utilises Javascript
 ---
 # Header
 
--Title of the Webpage Rock, Paper, Scissors in Large easy to read 'Orbitron' font.
+-Title of the Webpage "Rock, Paper, Scissors" in Large easy to read 'Orbitron' font.
+
+![Title 'Rock,Paper,Scissors text in large clear font](assets/images/title.png)
 
 # Game area:
 
