@@ -3,9 +3,7 @@
 My webpage is a classic game of Rock, Paper, Scissors that utilises Javascript so the user can play against the computer in a first to five format to decide the Champion. 
 ---
 
-
 ![Am I responsive page screenshot](assets/images/am-i-responsive-screenshot.png)
-
 
 
 # Features
@@ -13,7 +11,7 @@ My webpage is a classic game of Rock, Paper, Scissors that utilises Javascript s
 # Header
 
 -Title of the Webpage Rock, Paper, Scissors in Large easy to read 'Orbitron' font.
----
+
 # Game area:
 
 ## Choose Section:
@@ -59,9 +57,63 @@ My webpage is a classic game of Rock, Paper, Scissors that utilises Javascript s
 
 ### Browsers:
 
-- I have tested that this webpage works in Google Chrome, Firefox and Microsoft Edge and can confirm that after some minor tweaks it works perfectly in all of them. 
+- I have tested that this webpage works in Google Chrome, Firefox and Microsoft Edge and can confirm that this page works well across all of them. 
 
-### 
+### Validators:
+
+#### CSS:
+
+- No errors were found:
+
+![Image of CSS validator having no errors.](assets/images/css-no-errors.png)
+
+#### Javascript:
+
+-No errors were found:
+
+![Image of jshint validator finding no errors.](assets/images/jshint.png)
+
+#### HTML:
+
+- No errors were found:
+
+![Image of HTML validator finding no errors.](assets/images/html-no-errors.png)
+
+#### Lighthouse:
+
+- In lighthouse my webpage performed well with a score of 100 in accesibility.
+
+![Image of Lighthouse scores.](assets/images/lighthouse.png)
+
+## Bugs:
+
+- I have had a minor bug when running my webpage in firefox as the images do not zoom in when hovered over, I have tried changing the css styling from 'zoom' to Transform origin and while this has worked for firefox it has hindered ability in chrome and microsoft Edge, I have found no fix for this and have hence stuck with the zoom property as the webpage still works well. 
+
+## Credits:
+
+- I have used the 'Orbitron' from google fonts.
+
+- I have used the random number function from The love maths project to generate a random computer prediction.
+
+- I used a transform property to replace a zoom CSS function but have since taken it out as it did not have the desired effect.
+
+## Deployment:
+
+I have Deployed the Page in Github Pages.
+
+The steps to deploy are:
+
+-In the Github Repository navigate to the settings tab. 
+
+-Scroll down to the pages section in the 'Code and automation section on the left hand side.
+
+- Select branch: Main in source and save.
+
+- The link for the functioning webpage can be found here: https://jdacky95.github.io/Rock-Paper-Scissors-/
+
+
+
+
 
 
 

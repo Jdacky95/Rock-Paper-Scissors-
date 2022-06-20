@@ -45,7 +45,6 @@ header {
 }
 
 .btn1:hover {
-    transform-origin: 120%;
     zoom: 120%;
 }
 
