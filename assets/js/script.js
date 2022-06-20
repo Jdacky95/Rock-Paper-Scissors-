@@ -31,7 +31,7 @@ function gameOver() {
     computerScore.innerHTML = compScoreNum;
 
     if (yourScoreNum || compScoreNum < 5) {
-        letsPlay.innerHTML = "Let's play!";
+        letsPlay.innerHTML = "";
         rules.innerHTML = "First to five wins!";
         restart.innerHTML = "";
         youPicked.innerHTML = "";
