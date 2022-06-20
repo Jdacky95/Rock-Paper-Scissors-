@@ -45,7 +45,8 @@ header {
 }
 
 .btn1:hover {
-    transform: scale(120%)
+    transform-origin: 120%;
+    zoom: 120%;
 }
 
 #scissors {
