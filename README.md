@@ -1,10 +1,8 @@
 # Rock, Paper, Scissors
 
-My webpage is a classic game of Rock, Paper, Scissors that utilises Javascript so the user can play against the computer in a first to five format to decide the Champion. 
----
+My webpage is a classic game of "Rock, Paper, Scissors" that utilises Javascript to provide a fun interactive game where the user can play against the computer in a first to five format to decide the Champion. 
 
 ![Am I responsive page screenshot](assets/images/am-i-responsive-screenshot.png)
-
 
 # Features
 ---
@@ -38,20 +36,20 @@ My webpage is a classic game of Rock, Paper, Scissors that utilises Javascript s
 
 - This is a score board where both the user's and the computer's scores are tallied throughout the game.
 
-[Scoreboard displaying user and Computer's score](assets/images/score.png)
+![Scoreboard displaying user and Computer's score](assets/images/score.png)
 
 ### Footer:
 
 - The rules for the game are located in the footer of the page.
 
-[An image of the rules for Rock, Paper, Scissors](assets/images/rules.png)
+![An image of the rules for Rock, Paper, Scissors](assets/images/rules.png)
 
 ### Play again Section:
 
 - After One player has reached a score of five An overall winner is declared and the option to reset the scores to zero and play again is offered. 
 - 'Would you like to play again' is underlined and changes color when hovered over to display its action and encourage interactivity.
 
-[Text Declaring the overall winner and the option to play again.](assets/images/restart-highlight.png)
+![Text Declaring the overall winner and the option to play again.](assets/images/restart-highlight.png)
 
 ## Testing:
 
@@ -110,15 +108,3 @@ The steps to deploy are:
 - Select branch: Main in source and save.
 
 - The link for the functioning webpage can be found here: https://jdacky95.github.io/Rock-Paper-Scissors-/
-
-
-
-
-
-
-
-
-
-
-
-
