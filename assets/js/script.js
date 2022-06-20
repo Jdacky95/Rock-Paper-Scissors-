@@ -5,7 +5,7 @@ const scissors = document.getElementById("scissors");
 let yourScoreNum = 0;
 let compScoreNum = 0;
 
-// Declare lets play and "Restart":
+// Declare lets play, rules  and "Restart":
 
 let rules = document.getElementById("rules");
 let letsPlay = document.getElementById("lets-play");
@@ -22,7 +22,7 @@ let result = document.getElementById("result");
 const yourScore = document.getElementById("your-score");
 const computerScore = document.getElementById("computer-score");
 
-// Function for the game over restart div:
+// Function for the game over restart div: Shows score resetting to zero and Text resetting. 
 
 function gameOver() {
     yourScoreNum = 0;
@@ -82,8 +82,6 @@ function tie() {
 /*  Play function: Contains a switch function that switches between all possible user and computer choices and assigns 'win', 'lose' or 'tie' 
 functions appropriately, produces 'computer picked' variable in the DOM */
 
-
-
 function play(yourPick) {
 
     const computerPicked = computerPick();
@@ -109,11 +107,16 @@ function play(yourPick) {
             tie();
             break;
     }
+
     compPicked.innerHTML = computerPicked;
+
+    // Takes unnecesary text away once game has started.
 
     rules.innerHTML = "";
     letsPlay.innerHTML = "";
     restart.innerHTML = "";
+
+    // Function gives the option to reset the scores and play again once either scores reaches 5:
 
     if (yourScoreNum >= 5) {
         letsPlay.innerHTML = "You are the Champion!";
@@ -123,11 +126,7 @@ function play(yourPick) {
     if (compScoreNum >= 5) {
         restart.innerHTML = "Would you like to play again?";
         letsPlay.innerHTML = "The Computer wins this time!";
-
     }
-
-
-
 }
 
 // Event click  listeners for the rock paper and scissor icons. (yourPick)- shows Picks in the DOM.
@@ -153,7 +152,7 @@ scissors.addEventListener('click', function () {
 
 });
 
-// Event click listener for "play again"
+// Event click listener for "play again (reset)"
 
 restart.addEventListener('click', function () {
     gameOver();
